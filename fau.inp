@@ -1,0 +1,42 @@
+TITLE 
+Testing gasp6 on faujasite
+/TITLE
+
+ELEMENT #compulsory element block
+si 0.26
+o 1.35
+/ELEMENT
+
+POLY 
+tet si o 1.61
+/POLY
+
+OPTION
+#jiggle 0.1
+smallmove 1e-6
+smallmis 1e-3
+relax
+#gradual 5  #move in 5 steps to new cell position
+/OPTION
+
+INPUT
+Structure example-fau.cif
+#new cell 23.00 23.00 23.00 90 90 90
+#new cell 22.0000 22.0000 22.4000 95.0000 100.0000  90.0000
+#bonding fau.bond
+/INPUT
+
+OUTPUT 
+structure wib2.xtl
+#gradualname fau-5steps #is using gradual option
+#pol wib2.pol
+#bonding fau.bond
+#mismatch fau.mis
+#bondlengths fau.bl
+#angles fau.ang
+/OUTPUT
+
+
+
+
+

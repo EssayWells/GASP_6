@@ -1,0 +1,33 @@
+TITLE 
+Testing gasp6 on faujasite
+/TITLE
+
+ELEMENT #compulsory element block
+si 0.26
+o 1.35
+/ELEMENT
+
+POLY 
+tet si o 1.61
+/POLY
+
+OPTION
+smallmove 1e-6
+smallmis 1e-3 #window criterion: mismatch 0.001 Angstroms
+relax #run GASP relaxation
+cheb auto
+search cub #cubic search: vary (abc) together
+#search tet
+#search tri
+#search ort
+#search mon
+/OPTION
+
+INPUT
+Structure example-fau.cif
+/INPUT
+
+OUTPUT 
+window fauwincub   #basename for window-search output structures
+/OUTPUT
+

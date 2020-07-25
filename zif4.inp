@@ -1,0 +1,49 @@
+TITLE 
+Testing GASP 6 on ZIF4
+/TITLE
+
+ELEMENT #compulsory element block
+C 1.8
+N 1.4
+H 1.0
+Zn 0.6
+/ELEMENT
+
+POLY 
+#tet si o 1.61
+tet zn n 2.0
+/POLY
+
+BOND within 1.8
+C C H N #bond carbon to any of c,h,n
+N C #bond nitrogen only to c
+#h is only a terminal atom and so doesn't get its own entry
+/BOND
+
+OPTION
+grid 4.0
+relax
+smallmove 1e-6
+smallmis 1e-3
+search iso
+/OPTION
+
+INPUT
+Structure zif4.cif
+bonding zif4.bonding
+#new cell 15 15 18 95 95 95
+/INPUT
+
+OUTPUT 
+window zif4-win-iso
+#structure rel-zif4.cif
+#bonding zif4.bonding
+#poly zif4.pol
+#angles zif4.ang
+#bondlengths zif4.bl
+#mismatch zif4.mis
+/OUTPUT
+
+
+
+
