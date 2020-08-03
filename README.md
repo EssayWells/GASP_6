@@ -9,3 +9,7 @@ The .inp files are example command inputs as discussed in the manual.
 The .cpp and .h files are source code.
 
 The shell script makegasp.sh compiles the source code into executables.
+
+Don't forget to run dos2unix on the input file examples if you're not on Windows.
+
+
