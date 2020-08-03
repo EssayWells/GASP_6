@@ -30,7 +30,7 @@ search iso
 
 INPUT
 Structure zif4.cif
-bonding zif4.bonding
+#bonding zif4.bonding
 #new cell 15 15 18 95 95 95
 /INPUT
 
